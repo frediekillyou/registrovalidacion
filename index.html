@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>validacion de datos</title>
+    
+   
+</head>
+<body class="gg">
+    <div class="center">
+     </div>
+     <div class="ggg">
+        <form autocomplete="on" >
+
+           <label for="username"> Usuario </label>
+            <br>
+           <input type="text" id="username" name="username" pattern="^[a-zA-Z0-9]{5,15}" minlength="5" maxlength="15" required title="debe tener entre 5 y 15 caracteres alfanumericos">     
+           <br>
+           <label for="password"> password:</label>
+           <br>
+           <input type="password" id="password" name="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,} " minlength="8" maxlength="8" required title="ingrese una contraseña con al menos 1 may,1 min, 1 digito y 1 caracter especial. ">
+           <br>
+           <label for="correo">ingrese su correo</label>
+           <br>
+           <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required title="debe ser una direccion email valida"> 
+           <label for="codigo">Código Postal (exactamente 5 dígitos):</label>
+           <br>
+          <input type="text" id="codigo" name="codigo" pattern="^\d{5}$" title="Debe consistir en exactamente 5 dígitos" required>
+            <br>
+            <label for="telefono">Telefono</label>
+            <br>
+            <input type="number" id="number" name="number"pattern="^\+\d{1,3}\d{4,14}$">
+            <br>
+            <label for="fecha">fecha de nacimiento</label>
+            <br>
+            <input type="date" id="fecha" title="Ingrese una fecha en el formato aaaa-mm-dd (por ejemplo, 2024-06-18).">
+            <br>
+            
+          <input type="submit" value="enviar" onclick="confirm">
+        </form>
+     </div>
+</body>
+</html>
